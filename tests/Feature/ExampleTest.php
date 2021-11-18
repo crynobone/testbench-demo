@@ -18,4 +18,17 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function test_example_will_return_an_exception()
+    {
+        $response = $this->postJson("/subscribe", []);
+
+        $response->assertStatus(500);
+    }
 }
